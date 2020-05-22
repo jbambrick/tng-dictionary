@@ -1,10 +1,11 @@
 <mat-sidenav-container>
-  <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">Sidenav</mat-sidenav> <!-- 3 possible modes are over, push, or side -->
-  <mat-sidenav-content>Main
-    <button (click)="opened=!opened">Toggle Opened</button>
-    <button (click)="sidenav.open()">Open</button>
-    <button (click)="sidenav.close()">Close</button>
-    <button (click)="sidenav.toggle()">Toggle</button>
-    <mat-icon>reorder</mat-icon>
+  <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">
+    <!--Sidenav Content -->
+    <button (click)="sidenav.close()"><mat-icon style="color: inherit;">clear</mat-icon></button>
+  </mat-sidenav> <!-- 3 possible modes are over, push, or side -->
+  <mat-sidenav-content> <!-- Main Content -->
+    <mat-toolbar>
+    <button (click)="sidenav.toggle()"><mat-icon>reorder</mat-icon></button>
+    </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>
