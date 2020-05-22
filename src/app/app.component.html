@@ -1,11 +1,19 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">
     <!--Sidenav Content -->
-    <button (click)="sidenav.close()"><mat-icon style="color: inherit;">clear</mat-icon></button>
+    <button (click)="sidenav.close()"><mat-icon>clear</mat-icon></button>
+
+    <div class="container">
+    <button id="sidelink">Search</button>
+    <button id="sidelink">About</button>
+    <button id=sidelink>Credits</button>
+    </div>
   </mat-sidenav> <!-- 3 possible modes are over, push, or side -->
   <mat-sidenav-content> <!-- Main Content -->
     <mat-toolbar>
-    <button (click)="sidenav.toggle()"><mat-icon>reorder</mat-icon></button>
+    <button (click)="sidenav.toggle()" style="margin-left: 15px;"><mat-icon>reorder</mat-icon></button>
+    <div style="text-align: center; padding: 5px">Tŝilhqot'in Dictionary</div>
     </mat-toolbar>
+    
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,12 +1,27 @@
+#sidelink {
+    width: 100%;
+    height: 50px;
+}
+
 mat-sidenav-container {
     height: 100%;
 }
 
 mat-sidenav, mat-sidenav-content {
-    padding: 16px;
+    padding-left: 0px;
 }
 
 mat-sidenav {
     background-color: lightcoral;
     width: 200px;
+}
+
+mat-toolbar {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+mat-icon {
+    height: max-content;
 }
